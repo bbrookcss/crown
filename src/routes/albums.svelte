@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
     import { Lightbox, LightboxGallery,  GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 </script>
 <section>
@@ -8,74 +10,66 @@
                 <svelte:fragment slot="thumbnail">
             <div class="imgs">
                 <GalleryThumbnail>
-                    <img src="imges.webp" alt=" SAPMD">
+                    <img src="/images/imges.webp" alt=" SAPMD">
                 </GalleryThumbnail>
                 <GalleryThumbnail>
-                    <img src="imges2.webp" alt="">
+                    <img src="/images/imges2.webp" alt="">
                 </GalleryThumbnail>
                 <GalleryThumbnail>
-                    <img src="2imges.jpg" alt="">
-                </GalleryThumbnail>
-            </div>
-            <div class="imgs">
-                <GalleryThumbnail>
-                    <img src="2imges.jpg" alt="">
-                </GalleryThumbnail>
-                <GalleryThumbnail>
-                    <img src="imges4.webp" alt="">
-                </GalleryThumbnail>
-                <GalleryThumbnail>
-                    <img src="imges6.webp" alt="">
+                    <img src="/images/2imges.jpg" alt="">
                 </GalleryThumbnail>
             </div>
             <div class="imgs">
                 <GalleryThumbnail>
-                    <img src="imges6.webp" alt="">
+                    <img src="/images/tr.jpg" alt="">
                 </GalleryThumbnail>
                 <GalleryThumbnail>
-                    <img src="2imges.jpg" alt="">
+                    <img src="/images/imges4.webp" alt="">
                 </GalleryThumbnail>
                 <GalleryThumbnail>
-                    <img src="imges.webp" alt="">
+                    <img src="/images/a.jpg" alt="">
+                </GalleryThumbnail>
+            </div>
+            <div class="imgs">
+                <GalleryThumbnail>
+                    <img src="/images/imges6.webp" alt="">
+                </GalleryThumbnail>
+                <GalleryThumbnail>
+                    <img src="/images/rt.jpg" alt="">
+                </GalleryThumbnail>
+                <GalleryThumbnail>
+                    <img src="/images/d.jpg" alt="">
                 </GalleryThumbnail>
             </div> 
                 </svelte:fragment>
                 <GalleryImage>
-                    <img src="imges.webp" alt="">
+                    <img src="/images/imges.webp" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="imges2.webp" alt="">
+                    <img src="/images/imges2.webp" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="2imges.jpg" alt="">
+                    <img src="/images/2imges.jpg" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="8imges.jpg" alt="">
+                    <img src="/images/tr.jpg" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="8imges.jpg" alt="">
+                    <img src="/images/imges4.webp" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="2imges.jpg" alt="">
+                    <img src="/images/a.jpg" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="imges4.webp" alt="">
+                    <img src="/images/imges6.webp" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="imges6.webp" alt="">
+                    <img src="/images/rt.jpg" alt="">
                 </GalleryImage>
                 <GalleryImage>
-                    <img src="imges6.webp" alt="">
+                    <img src="/images/d.jpg" alt="">
                 </GalleryImage>
-                <GalleryImage>
-                    <img src="8imges.jpg" alt="">
-                </GalleryImage>
-                <GalleryImage>
-                    <img src="2imges.jpg" alt="">
-                </GalleryImage>
-                <GalleryImage>
-                    <img src="imges.webp" alt="">
-                </GalleryImage>
+                
         </LightboxGallery>
         </div> 
     </div>
@@ -98,6 +92,11 @@
         justify-content: space-around;
         align-items: center;
     }
+    .container .box .imgs img:hover{
+        scale: 104%;
+        transition: .5s;
+    }
+
     .container .box .imgs {
         display: flex;
         flex-direction: column;
@@ -106,6 +105,7 @@
     .container .box .imgs img {
         width: 100%;
         margin-bottom: 15px;
+        transition: .2s;
         cursor: pointer;
         border-radius: 5px;
         height: auto;

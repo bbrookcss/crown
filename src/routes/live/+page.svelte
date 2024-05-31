@@ -1,14 +1,29 @@
 <script>
-   import Footer from '../footer.svelte'; 
-</script>
+	// @ts-nocheck
+	import { onMount, onDestroy } from 'svelte';
+  
+ let originalBackgroundColor;
+ 
+ onMount(() => {
+	 // Save the original background color
+	 originalBackgroundColor = document.body.style.backgroundColor;
+	 // Set the new background color for this page
+	 document.body.style.backgroundColor = 'black';
+ });
+ 
+ onDestroy(() => {
+	 // Restore the original background color when this component is destroyed
+	 document.body.style.backgroundColor = originalBackgroundColor;
+ });
+  </script>
 <header>
-	<div class="logo"><a href="./"><h1>crown wedding films</h1></a></div>
+	<div class="logo"><a href="../"><h1>crown wedding films</h1></a></div>
 	<div class="list">
 		<div class="itms">
-			<a href="./#about"><p>about us</p></a>
-			<a href="/gallery"><p>Gallery </p></a></div>
+			<a href="../#about"><p>about us</p></a>
+			<a href="../gallery"><p>Gallery </p></a></div>
 		<div class="itms">
-			<a href="./livestream"><p >livestream</p></a>
+			<a href="../livestream"><p >livestream</p></a>
 			<button>Login</button>
 		</div>
 	</header>
@@ -16,18 +31,39 @@
 	<section>
 		<div class="cont">
 			<div class="bi">
-				<img src="play.jpeg" alt="play">
+				<img src="images/play.jpeg" alt="play">
 			</div>
 			<div class="playbutton">
-			<img src="play.svg" alt="play button">
+			<img src="images/play.svg" alt="play button">
 		</div>
 		</div>
 	</section>
-<Footer/>
-<style>
+	<div class="copyright">
+		<p>crown © 2024</p>
+	  </div>
+	  <style>
+	  
+	  .copyright{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		top: 40px;
+		position: relative;
+		text-align: center;
+	  }
+	  .copyright p{
+			  font-size: 12px;
+			  color: rgb(181, 181, 181);
+			}
    header{
       margin-top: -150px;
+	  background-color: black;
+	  height: 90px;
    }
+   .itms button{
+	border: 1px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
    .logo a{
       text-decoration: none;
       color: white;

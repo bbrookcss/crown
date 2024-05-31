@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	import { Lightbox, LightboxGallery,  GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
 	import Footer from '../footer.svelte';
 	import Hade from '../hade.svelte';
@@ -62,108 +64,108 @@ function melse() {
 					<svelte:fragment slot="thumbnail">
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-				</div>
-				<div class="imgs">
-					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges4.webp" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges4.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges6.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+				</div>
+				<div class="imgs">
+					<GalleryThumbnail>
+						<img src="/images/imges6.webp" alt="Simple lightbox">
 					</GalleryThumbnail>	
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div> 
 			</svelte:fragment>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges4.webp" alt="Simple lightbox">
+					<img src="/images/imges4.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 			</LightboxGallery>
 			</div>
@@ -179,108 +181,108 @@ function melse() {
 					<svelte:fragment slot="thumbnail">
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
-					</GalleryThumbnail>
-				</div>
-				<div class="imgs">
-					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges4.webp" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges4.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges6.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+				</div>
+				<div class="imgs">
+					<GalleryThumbnail>
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>	
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/imges6.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div> 
 			</svelte:fragment>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges4.webp" alt="Simple lightbox">
+					<img src="/images/imges4.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 			</LightboxGallery>
 			</div>
@@ -296,108 +298,108 @@ function melse() {
 					<svelte:fragment slot="thumbnail">
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-				</div>
-				<div class="imgs">
-					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges4.webp" alt="Simple lightbox">
-					</GalleryThumbnail>
-					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges6.webp" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges4.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+					<GalleryThumbnail>
+						<img src="/images/imges6.webp" alt="Simple lightbox">
+					</GalleryThumbnail>
+				</div>
+				<div class="imgs">
+					<GalleryThumbnail>
+						<img src="/images/imges6.webp" alt="Simple lightbox">
 					</GalleryThumbnail>	
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div>
 				<div class="imgs">
 					<GalleryThumbnail>
-						<img src="imges.webp" alt="Simple lightbox">
+						<img src="/images/imges.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="imges2.webp" alt="Simple lightbox">
+						<img src="/images/imges2.webp" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="2imges.jpg" alt="Simple lightbox">
+						<img src="/images/2imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 					<GalleryThumbnail>
-						<img src="8imges.jpg" alt="Simple lightbox">
+						<img src="/images/8imges.jpg" alt="Simple lightbox">
 					</GalleryThumbnail>
 				</div> 
 			</svelte:fragment>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges4.webp" alt="Simple lightbox">
+					<img src="/images/imges4.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges6.webp" alt="Simple lightbox">
+					<img src="/images/imges6.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges.webp" alt="Simple lightbox">
+					<img src="/images/imges.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="imges2.webp" alt="Simple lightbox">
+					<img src="/images/imges2.webp" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="2imges.jpg" alt="Simple lightbox">
+					<img src="/images/2imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 				<GalleryImage>
-					<img src="8imges.jpg" alt="Simple lightbox">
+					<img src="/images/8imges.jpg" alt="Simple lightbox">
 				</GalleryImage>
 			</LightboxGallery>
 			</div>
@@ -414,15 +416,16 @@ function melse() {
 			align-items: center;
 		}
 		.lode h1{
-			border-bottom: 2px solid rgb(204, 204, 204);
+			border-bottom: 2px solid rgb(35, 35, 35);
 			font-weight: 300;
 			padding: 10px;
+			color: black;
             transition: .5s;
 		}
         .lode h1:hover{
             cursor: pointer;
-            border-top: 4px solid rgb(204, 204, 204);
-            border-right: 2px solid rgb(204, 204, 204);
+            border-top: 4px solid rgb(49, 49, 49);
+            border-right: 2px solid rgb(60, 60, 60);
             border-bottom: none;
         }
 		#galler{
@@ -448,13 +451,13 @@ function melse() {
 		cursor: pointer;
 		font-weight: 300;
 		text-transform: capitalize;
-		color: rgb(187, 187, 187);
+		color: rgb(0, 0, 0);
 		font-size: 25px;
 		font-family: "Cinzel", serif;
 	}
 	.mk{
-		color: white;
-		border-bottom: 1px solid white;
+		color: rgb(117, 117, 117);
+		border-bottom: 1px solid rgb(117, 117, 117);
 	}
 	.container h1{
 		margin-top: 200px;

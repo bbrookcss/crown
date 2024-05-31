@@ -1,15 +1,32 @@
 <script>
-   import Footer from '../footer.svelte'; 
-	
-</script>
+   import { onMount, onDestroy } from 'svelte';
+ 
+let originalBackgroundColor;
+
+onMount(() => {
+    // Save the original background color
+    originalBackgroundColor = document.body.style.backgroundColor;
+    // Set the new background color for this page
+    document.body.style.backgroundColor = 'black';
+});
+
+onDestroy(() => {
+    // Restore the original background color when this component is destroyed
+    document.body.style.backgroundColor = originalBackgroundColor;
+});
+
+  function showAlert(){
+    alert("Invitation not allowed");
+  }
+ </script>
 <header>
 	<div class="logo"><a href="./"><h1>crown wedding films</h1></a></div>
 	<div class="list">
 		<div class="itms">
-			<a href="./#about"><p>about us</p></a>
-			<a href="/gallery"><p>Gallery </p></a></div>
+			<a href="../#about"><p>about us</p></a>
+			<a href="../gallery"><p>Gallery </p></a></div>
 		<div class="itms">
-			<a href="./livestream"><p >livestream</p></a>
+			<a href="../livestream"><p >livestream</p></a>
 			<button>Login</button>
 		</div>
 	</header>
@@ -27,16 +44,33 @@
             <input type="password" placeholder="Enter invitation code">
          </div>
          <div>
-            <a href="../live"><button>watch live now</button></a>
+            <button on:click={showAlert}>watch live now</button>
          </div>
       </div>
    </div>
 </section>
 <br>
-<Footer/>
+<div class="copyright">
+  <p>crown © 2024</p>
+</div>
 <style>
+
+.copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  position: relative;
+  text-align: center;
+}
+.copyright p{
+        font-size: 12px;
+        color: rgb(181, 181, 181);
+      }
    header{
       margin-top: -180px;
+      height: 90px;
+      background-color: black;
    }
    .logo a{
       text-decoration: none;
@@ -59,6 +93,10 @@
 		text-decoration: none;
 		color: white;
 	}
+   .itms button{
+	border: 1px solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
+}
    .container {
       display: flex;
       flex-direction: column;

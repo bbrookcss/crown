@@ -37,17 +37,18 @@
   
   <header>
 	<div class="navbutton">
-	  <a href="#" on:click={navbutt}><img src="nav.png" alt=""></a>
+	  <!-- svelte-ignore a11y-invalid-attribute -->
+	  <a href="#" on:click={navbutt}><img src="/images/nav.png" alt="" class="navbutton"/></a>
 	</div>
 	<div class="backblur">
 	  <button on:click={navx}>X</button>
 	</div>
 	<div class="logo">
-	  <a href="./"><h1>crown wedding films</h1></a>
+	  <a href="../"><h1>crown wedding films</h1></a>
 	</div>
 	<div class="list">
 	  <div class="itms">
-		<a href="./#about"><p>about us</p></a>
+		<a href="../#about"><p>about us</p></a>
 		<a href="/gallery"><p>Gallery</p></a>
 	  </div>
 	  <div class="itms">
@@ -63,12 +64,13 @@
 	}
     .logo a{
         text-decoration: none;
-        color: white;
+        color: rgb(0, 0, 0);
     }
 	.list{
 		display: flex;
 		padding-left: 30px;
 		padding-right: 30px;
+		margin-top: -10px;
 		justify-content: space-between;
 	}
 	.itms{
@@ -76,7 +78,7 @@
 	}
 	.itms a{
 		text-decoration: none;
-		color: white;
+		color: rgb(0, 0, 0);
 	}
 	.backblur{
 		display: none;
@@ -125,7 +127,7 @@
 			text-align: center;
 			font-weight: 200;
 			color: white;
-			font-family: sans-serif;
+			font-family: Arial, Helvetica, sans-serif;
 			background: transparent;
 			font-size: 50px;
 			position: absolute;

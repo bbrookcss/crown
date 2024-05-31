@@ -1,171 +1,186 @@
 <script>
-  import { Lightbox, LightboxGallery,  GalleryThumbnail, GalleryImage } from 'svelte-lightbox';
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    const videos = document.querySelectorAll('video');
+    const imgs = document.querySelectorAll('.img');
+
+    function pauseOtherVideos(except) {
+      videos.forEach(video => {
+        if (video !== except) {
+          video.pause();
+        }
+      });
+    }
+
+    function playVideo(video) {
+      video.play();
+    }
+
+    videos.forEach(video => {
+      video.addEventListener('mouseenter', () => {
+        pauseOtherVideos(video);
+        playVideo(video);
+      });
+
+      video.addEventListener('mouseleave', () => {
+        videos.forEach(video => {
+          video.play();
+        });
+      });
+    });
+
+    imgs.forEach(img => {
+      img.addEventListener('mouseenter', () => {
+        pauseOtherVideos(null);
+      });
+
+      img.addEventListener('mouseleave', () => {
+        videos.forEach(video => {
+          video.play();
+        });
+      });
+    });
+  });
 </script>
-<section><LightboxGallery>
-  <svelte:fragment slot="thumbnail">
-    <div class="logos" id="live">
-        <div class="logos-slide">
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges2.webp" alt="slid img" /></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges6.webp" alt="slid img" /></GalleryThumbnail></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges3.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-          <div class="img">
-            <GalleryThumbnail>  
-          <img src="imges4.webp" alt="slid img"/></GalleryThumbnail></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="10imges.jpg" alt="slid img"/></GalleryThumbnail></div>
-          </div>
-          <div class="logos-slide">
-          <div class="img">
-            <GalleryThumbnail>  
-          <img src="imges5.webp" alt="slid img" /></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges6.webp" alt="slid img" /></GalleryThumbnail></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges2.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges6.webp" alt="slid img"/></GalleryThumbnail></div>
-          <div class="img">
-            <GalleryThumbnail>
-          <img src="imges2.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-            </div>
+<section class="tops">
+  <div class="logos" id="live">
+    <div class="logos-slide">
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="1.mp4" type="video/mp4">
+        </video>
       </div>
-    </svelte:fragment>
-    <GalleryImage>  
-      <video controls autoplay>
-        <source src="yo.mp4" type="video/mp4">
-      </video>
-    </GalleryImage>
-    <GalleryImage>
-      <img src="imges6.webp" alt="Simple lightbox">
-    </GalleryImage>
-    <GalleryImage>
-      <video controls autoplay>
-        <source src="yo.mp4" type="video/mp4">
-      </video>
-    </GalleryImage>
-    <GalleryImage>
-      <img src="imges4.webp" alt="Simple lightbox">
-    </GalleryImage>
-    <GalleryImage>
-      <img src="10imges.jpg" alt="Simple lightbox"> 
-    </GalleryImage>
-    <GalleryImage>
-      <video autoplay width="100%" muted loop>
-        <source src="yo.mp4" type="video/mp4">
-      </video>  
-    </GalleryImage>
-    <GalleryImage>
-      <img src="imges6.webp" alt="Simple lightbox">
-    </GalleryImage>
-    <GalleryImage>
-      <video controls autoplay>
-        <source src="yo.mp4" type="video/mp4">
-      </video>
-    </GalleryImage> 
-    <GalleryImage>
-    <img src="imges6.webp" alt="Simple lightbox">
-  </GalleryImage>
-</LightboxGallery>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="logos-slide">
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="3.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="4.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
 </section>
+
 <section>
-  <LightboxGallery>
-    <svelte:fragment slot="thumbnail">
-      <div class="logos" id="live">
-          <div class="logos-sli">
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges2.webp" alt="slid img" /></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges6.webp" alt="slid img" /></GalleryThumbnail></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges3.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-            <div class="img">
-              <GalleryThumbnail>  
-            <img src="imges4.webp" alt="slid img"/></GalleryThumbnail></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="10imges.jpg" alt="slid img"/></GalleryThumbnail></div>
-            </div>
-            <div class="logos-sli">
-            <div class="img">
-              <GalleryThumbnail>  
-            <img src="imges5.webp" alt="slid img" /></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges6.webp" alt="slid img" /></GalleryThumbnail></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges2.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges6.webp" alt="slid img"/></GalleryThumbnail></div>
-            <div class="img">
-              <GalleryThumbnail>
-            <img src="imges2.webp" alt="slid img"/></GalleryThumbnail><img src="play.svg" class="svg" alt="playsvg"></div>
-              </div>
-        </div>
-      </svelte:fragment>
-      <GalleryImage>  
-        <video controls autoplay>
-          <source src="yo.mp4" type="video/mp4">
+  <div class="logos" id="live">
+    <div class="logos-sli">
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="5.mp4" type="video/mp4">
         </video>
-      </GalleryImage>
-      <GalleryImage>
-        <img src="imges6.webp" alt="Simple lightbox">
-      </GalleryImage>
-      <GalleryImage>
-        <video controls autoplay>
-          <source src="yo.mp4" type="video/mp4">
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="6.mp4" type="video/mp4">
         </video>
-      </GalleryImage>
-      <GalleryImage>
-        <img src="imges4.webp" alt="Simple lightbox">
-      </GalleryImage>
-      <GalleryImage>
-        <img src="10imges.jpg" alt="Simple lightbox"> 
-      </GalleryImage>
-      <GalleryImage>
-        <video autoplay width="100%" muted loop>
-          <source src="yo.mp4" type="video/mp4">
-        </video>  
-      </GalleryImage>
-      <GalleryImage>
-        <img src="imges6.webp" alt="Simple lightbox">
-      </GalleryImage>
-      <GalleryImage>
-        <video controls autoplay>
-          <source src="yo.mp4" type="video/mp4">
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="7.mp4" type="video/mp4">
         </video>
-      </GalleryImage> 
-      <GalleryImage>
-      <img src="imges6.webp" alt="Simple lightbox">
-    </GalleryImage>
-  </LightboxGallery>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="8.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="9.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <div class="logos-sli">
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="5.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="6.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="7.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="8.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="img">
+        <video autoplay muted loop>
+          <source src="9.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
 </section>
+<!-- svelte-ignore a11y-media-has-caption -->
+<div class="preview">
+  <div class="ovideo">
+    <video controls autoplay muted loop>
+      <source src="1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
 <style>
-  @keyframes scaleInOut {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.3);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
+ .preview{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  text-indent: center;
+  z-index: 100;
+ }
+ .preview .ovideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+ }
+ .ovideo video{
+  width: 70%;
+ }
    @keyframes slide {
   from {
     transform: translateX(-100%);
@@ -183,20 +198,21 @@
   }
 }
 
+.tops{
+  margin-top: 260px;
+}
 .logos {
   overflow: hidden;
   display: flex;
-  margin-bottom: 20px;
+  margin-top: 50px;
   position: relative;
 }
-
 .logos-slide {
   gap: 20px;
   display: flex;
   margin-left: 20px;
-  animation: 300s slide infinite linear;
+  animation: 40s slide infinite linear;
 }
-
 .img{
     width: 623px;
     height: 376px;
@@ -205,27 +221,30 @@
     align-items: center;
     display: flex;
     gap: 20px;
+    
 }
+
 .img:hover{
   gap: 30px;
-  opacity: 70%;
-  transition: .5s;
-  scale: 104%;
-}
-.img .svg{
-  position: absolute;
-  width: 80px;
-  animation: scaleInOut 1.5s infinite;
-}
-.img img {
-  width: 100%;
+  filter: brightness(0.7);
+  transition: .3s;
   cursor: pointer;
+  scale: 104.5%;
+  
+}
+.img video{
+  width: 100%;
+  transition: .5s;
+}
+.img video:hover{
+  border-radius: 10px;
+  transition: .5s;
 }
 .logos-sli {
   gap: 20px;
   display: flex;
-  margin-left: 20px;
-  animation: 350s sli infinite linear;
+  margin-left: 10px;
+  animation: 40s sli infinite linear;
 }
 .logos:before,
 .logos:after {
@@ -236,20 +255,16 @@
   content: "";
   z-index: 2;
 }
-
 .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), black);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), black);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 .logos:hover .logos-sli {
-  animation-play-state: paused;
-}
-.svg:hover{
   animation-play-state: paused;
 }
 .logos:hover .logos-slide {
@@ -264,12 +279,12 @@
 @media (max-width: 600px){
   .logos:before {
   left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.775));
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
 }
 
 .logos:after {
   right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.775));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
 }
 }
 </style>
