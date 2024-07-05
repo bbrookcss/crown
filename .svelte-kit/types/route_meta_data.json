@@ -2,7 +2,14 @@
 	"/": [
 		"src/routes/+page.js"
 	],
+	"/account": [],
+	"/account/wedding1": [],
+	"/account/wedding2": [],
+	"/account/wedding3": [],
+	"/account/wedding4": [],
+	"/account/wedding5": [],
 	"/gallery": [],
 	"/livestream": [],
-	"/live": []
+	"/live": [],
+	"/user": []
 }
