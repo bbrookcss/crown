@@ -6,7 +6,7 @@
     let success = false;
   
     const registerUser = async () => {
-      const response = await fetch('https://test.crownweddingfilms.com/users/register', {
+      const response = await fetch('https://backend.crownweddingfilms.com/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

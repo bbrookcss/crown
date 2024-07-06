@@ -65,7 +65,7 @@
       }
   
       try {
-        const response = await fetch(`https://test.crownweddingfilms.com/users/${userId}`, {
+        const response = await fetch(`https://backend.crownweddingfilms.com/users/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }

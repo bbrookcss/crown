@@ -9,7 +9,7 @@
     let registerSuccess = false;
   
     const loginUser = async () => {
-      const response = await fetch('https://test.crownweddingfilms.com/users/login', {
+      const response = await fetch('https://backend.crownweddingfilms.com/users/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -32,7 +32,7 @@
     };
   
     const registerUser = async () => {
-      const response = await fetch('https://test.crownweddingfilms.com/users/register', {
+      const response = await fetch('https://backend.crownweddingfilms.com/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
