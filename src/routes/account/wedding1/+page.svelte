@@ -65,7 +65,7 @@
       }
   
       try {
-        const response = await fetch(`https://backend.crownweddingfilms.com/users/${userId}`, {
+        const response = await fetch(`http://localhost:3000/users/${userId}`, {
           headers: {
             'Authorization': `Bearer ${token}`
           }
@@ -94,7 +94,7 @@
         <div class="fixheader"></div>
         <section>
           <div class="container" id="gallery">
-            <h2>Welcome, {username}!</h2>
+            <h2><span>Welcome back,</span> {username}!</h2>
             <div class="open">
               <button on:click={wedding} class="wedding"> <h1 class="mk">Video</h1></button>
               <button on:click={melse} class="melse"> <h1 >Photo</h1></button>
@@ -402,11 +402,12 @@
         color: rgb(117, 117, 117);
         border-bottom: 1px solid rgb(117, 117, 117);
       }
-      .container h1{
-        margin-top: 20px;
-        
+      .container span{
+        font-weight: 100;
+        font-size: 23px;
       }
       .container {
+        color: black;
             padding-left: 60px;
             padding-right: 60px;
             display: flex;
@@ -434,5 +435,25 @@
             border-radius: 5px;
             height: auto;
         }
-      
+        @media (max-width: 640px) {
+        
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .container .box {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .container .box .imgs {
+            width: 100%;
+        }.open{
+		gap: 10px;
+		margin-bottom: 10px;
+	}button h1{
+		font-size: 25px;
+    color: black;
+		font-family: "Cinzel", serif;
+	}
+    }
         </style>

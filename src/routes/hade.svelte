@@ -13,7 +13,7 @@
             return;
         }
 
-        const response = await fetch('https://backend.crownweddingfilms.com/users/login', {
+        const response = await fetch('http://localhost:3000/users/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -91,7 +91,7 @@
   <header>
 	<div class="navbutton">
 	  <!-- svelte-ignore a11y-invalid-attribute -->
-	  <a href="#" on:click={navbutt}><img src="/images/nav.png" alt="" class="navbutton" /></a>
+	  <a href="#" on:click={navbutt}><img src="/images/nav.png" alt="" /></a>
 	</div>
 	<!-- svelte-ignore a11y-click-events-have-key-events -->
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
@@ -231,9 +231,14 @@
 		align-items: center;
 		position: relative;
 	  }
+	  .itms button{
+		color: white;
+		border-color: white;
+	  }
 	  .itms p {
 		margin: 20px 15px;
-		font-size: 23px;
+		font-size: 27px;
+		color: white;
 		justify-content: center;
 		text-align: center;
 		align-items: center;

@@ -1,5 +1,4 @@
 <script>
-
 </script>
 <section class="about" id="about">
     <div class="container">
@@ -22,28 +21,24 @@
         justify-content: center;
         align-items: center;
         text-align: center;
-        margin-top: 220px;
-        background-color: rgb(238, 238, 238);
+        margin-top: 100px;
+        background: linear-gradient(to bottom, white 0%, white 5%, rgb(238, 238, 238) 95%, rgb(238, 238, 238) 100%);
+
+
     }
     .container h1 {
         font-size: 20px;
         margin-top: 150px;
-
     }
     .container .row {
         display: flex;
         justify-content: space-between;
-    }
-    .col{
-        
     }
     .container .coll p{ 
         width: 450px;
     }
     .container .col img {
         width: 100%;
-    }
-    .coll{
     }
     .coll h1 {
         font-size: 50px;
@@ -55,7 +50,30 @@
         
     }
     @media (max-width: 900px){
-       
+        .container{
+            height:auto;
+            margin-top: 150px;
+        }
+        .container h1 {
+        margin-top: 50px;
+    }
+        .container .row {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .col{
+        top: 60px;
+        position: relative;
+    }
+    .container .coll p{ 
+        width: auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     }
     @media (max-width: 500px){
         
@@ -65,6 +83,9 @@
     }
 
     @media (max-width: 400px){
+        .container h1 {
+        font-size: 40px;
+    }
        
     }
 </style>

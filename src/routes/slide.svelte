@@ -1,12 +1,12 @@
 <script>
- import { onMount } from 'svelte';
-  import { onDestroy } from 'svelte';
+  import { onMount } from "svelte";
+  import { onDestroy } from "svelte";
 
   let isPreviewVisible = false;
-  let previewVideoSrc = '';
+  let previewVideoSrc = "";
 
   onMount(() => {
-    const scrollContainers = document.querySelectorAll('.logos');
+    const scrollContainers = document.querySelectorAll(".logos");
 
     scrollContainers.forEach((container, index) => {
       let scrollAmount = 0;
@@ -19,7 +19,10 @@
         container.scrollLeft += scrollStep * direction;
 
         // Reset scroll position when reaching the end or beginning
-        if (container.scrollLeft >= container.scrollWidth - container.clientWidth) {
+        if (
+          container.scrollLeft >=
+          container.scrollWidth - container.clientWidth
+        ) {
           scrollAmount = 0;
           container.scrollLeft = 0;
         } else if (container.scrollLeft <= 0) {
@@ -31,19 +34,21 @@
       let scrollTimer = setInterval(startScrolling, scrollInterval);
 
       // Pause scrolling on hover
-      container.addEventListener('mouseenter', () => clearInterval(scrollTimer));
-      container.addEventListener('mouseleave', () => {
+      container.addEventListener("mouseenter", () =>
+        clearInterval(scrollTimer),
+      );
+      container.addEventListener("mouseleave", () => {
         scrollTimer = setInterval(startScrolling, scrollInterval);
       });
     });
 
     // Add event listeners to videos inside .img to pause on hover and play on mouse leave
-    const imgVideos = document.querySelectorAll('.img video');
-    imgVideos.forEach(video => {
-      video.addEventListener('mouseenter', () => video.pause());
-      video.addEventListener('mouseleave', () => video.play());
-      video.addEventListener('click', () => {
-        previewVideoSrc = video.querySelector('source').src;
+    const imgVideos = document.querySelectorAll(".img video");
+    imgVideos.forEach((video) => {
+      video.addEventListener("mouseenter", () => video.pause());
+      video.addEventListener("mouseleave", () => video.play());
+      video.addEventListener("click", () => {
+        previewVideoSrc = video.querySelector("source").src;
         isPreviewVisible = true;
       });
     });
@@ -55,26 +60,27 @@
 </script>
 
 <section class="tops">
+  <h1>Our projects</h1>
   <div class="logos" id="live">
     <div class="logos-slide">
       <div class="img">
         <video autoplay muted loop>
-          <source src="1.mp4" type="video/mp4">
+          <source src="1.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="2.mp4" type="video/mp4">
+          <source src="2.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="3.mp4" type="video/mp4">
+          <source src="3.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="4.mp4" type="video/mp4">
+          <source src="4.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -86,27 +92,27 @@
     <div class="logos-sli">
       <div class="img">
         <video autoplay muted loop>
-          <source src="5.mp4" type="video/mp4">
+          <source src="5.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="6.mp4" type="video/mp4">
+          <source src="6.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="7.mp4" type="video/mp4">
+          <source src="7.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="8.mp4" type="video/mp4">
+          <source src="8.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="img">
         <video autoplay muted loop>
-          <source src="9.mp4" type="video/mp4">
+          <source src="9.mp4" type="video/mp4" />
         </video>
       </div>
     </div>
@@ -115,15 +121,16 @@
 
 <!-- svelte-ignore a11y-media-has-caption -->
 {#if isPreviewVisible}
-<div class="preview">
-  <h2 on:click={closePreview}>x</h2>
-  <div class="ovideo">
-    <video controls autoplay >
-      <source src={previewVideoSrc} type="video/mp4">
-    </video>
+  <div class="preview">
+    <h2 on:click={closePreview}>x</h2>
+    <div class="ovideo">
+      <video controls muted>
+        <source src={previewVideoSrc} type="video/mp4" />
+      </video>
+    </div>
   </div>
-</div>
 {/if}
+
 <style>
   .preview {
     width: 100%;
@@ -135,17 +142,17 @@
     left: 0;
     z-index: 100;
   }
- .preview h2{
-   color: white;
-   font-weight: 100;
-   display: flex;
-   cursor: pointer;
-   top: 70px;
-   left: 85%;
-   position: relative;
-   font-size: 40px;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
- }
+  .preview h2 {
+    color: white;
+    font-weight: 100;
+    display: flex;
+    cursor: pointer;
+    top: 70px;
+    left: 85%;
+    position: absolute;
+    font-size: 40px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",sans-serif;
+  }
   .preview .ovideo {
     display: flex;
     justify-content: center;
@@ -158,7 +165,12 @@
   }
 
   .tops {
-    margin-top: 260px;
+    margin-top: 150px;
+    text-align: center;
+    color: rgb(63, 63, 63);
+  }
+  .tops h1 {
+    font-size: 50px;
   }
 
   .logos {
@@ -207,7 +219,6 @@
     display: flex;
   }
 
-
   @media (max-width: 900px) {
     .img {
       width: 523px;
@@ -216,14 +227,21 @@
   }
 
   @media (max-width: 600px) {
-    .logos:before {
-      left: 0;
-      background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    .preview h2{
+      top: 20%;
     }
-
-    .logos:after {
-      right: 0;
-      background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
+    .ovideo video {
+      width: 95%;
+    }
+    .img {
+      width: 453px;
+      height: 306px;
+    }
+    .logos {
+    margin-top: 10px;
+  }
+    .tops {
+      margin-top: 150px;
     }
   }
 </style>

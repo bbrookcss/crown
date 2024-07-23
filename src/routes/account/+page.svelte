@@ -16,7 +16,7 @@
     }
 
     try {
-      const response = await fetch(`https://backend.crownweddingfilms.com/users/${userId}`, {
+      const response = await fetch(`http://localhost:3000/users/${userId}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

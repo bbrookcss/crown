@@ -20,7 +20,6 @@
     overflow-x: scroll; /* Change to horizontal scroll */
     overflow-y: hidden; /* Hide vertical scrollbar */
     flex-wrap: nowrap; /* Prevent wrapping */
-    margin-bottom: 100px;
     margin-top: 100px;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
   }
@@ -38,7 +37,7 @@
   }
 
   .box {
-    width: 43vh;
+    width: 27%;
     height: 77vh;
     border-radius: 30px;
     transition: .3s;
@@ -56,4 +55,43 @@
     object-fit: cover;
     border-radius: 30px;
   }
+  @media (max-width: 900px){
+    .box{
+      width: 40%;
+      height: 70vh;
+      border-radius: 30px;
+      transition: .3s;
+      flex: 0 0 auto; /* Prevent box from shrinking or growing */
+    }
+    .row{
+      margin-left: 70px;
+
+      padding-right: 0px;
+    }
+  }
+  @media (max-width: 500px){
+       
+      }
+      @media (max-width: 640px){
+        .box{
+      width: 60%;
+      height: 65vh;
+      }
+      .row{
+      margin-left: 50px;
+      gap: 15px;
+    }
+    }
+  
+      @media (max-width: 400px){
+         .container {
+          margin-top: 60px;
+        }.box{
+      width: 85%;
+      height: 65vh;
+      }
+      .row{
+      margin-left: 50px;
+    }
+      }
 </style>

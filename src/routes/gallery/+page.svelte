@@ -491,5 +491,28 @@ function melse() {
         border-radius: 5px;
         height: auto;
     }
+	@media (max-width: 640px) {
+        
+        .container {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .container .box {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+        .container .box .imgs {
+            width: 100%;
+        }.open{
+		gap: 10px;
+		margin-bottom: 10px;
+	}button h1{
+		font-size: 20px;
+		font-family: "Cinzel", serif;
+	}.container h1{
+		margin-top: 120px;
+		
+	}
+    }
 	
     </style>

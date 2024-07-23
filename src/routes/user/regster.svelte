@@ -6,7 +6,7 @@
     let success = false;
   
     const registerUser = async () => {
-      const response = await fetch('https://backend.crownweddingfilms.com/users/register', {
+      const response = await fetch('http://localhost:3000/users/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -29,6 +29,37 @@
   <style>
     .black{
         color: black;
+        display: grid;
+        text-align: center;
+        place-content: center;
+        place-items: center;
+
+    }
+    form{
+      width: 400px;
+      border: 1px solid rgba(0, 0, 0, 0.322);
+        display: grid;
+        gap: 10px;
+        padding: 20px 20px;
+        text-align: center;
+        place-content: center;
+        place-items: center;
+    }
+    button{
+      width: 150px;
+      height: 30px;
+      border: none;
+      background-color: black;
+      color: white;
+      border-radius: 5px;
+    }
+    input{
+      width: 200px;
+      height: 30px;
+      border: 1px solid black;
+      background-color: transparent;
+      color: black;
+      border-radius: 5px;
     }
         div{
         color: red;
@@ -36,15 +67,15 @@
   </style>
   
   <div class="black">
-    <h1>Register</h1>
+    <h1>Crown Admin to register a new user</h1>
     <form on:submit|preventDefault={registerUser}>
-      <label for="username">Username:</label>
+      <label for="username">Username</label>
       <input type="text" id="username" bind:value={username} required />
   
-      <label for="password">Password:</label>
+      <label for="password">Wedding Day</label>
       <input type="password" id="password" bind:value={password} required />
   
-      <button type="submit">Register</button>
+      <button type="submit">Submit</button>
     </form>
     {#if message}
       <div class:message class:success={success} class:error={!success}>

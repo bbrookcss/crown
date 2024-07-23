@@ -15,11 +15,6 @@
     </footer>
     
     <style>
-      .copyright{
-        margin-top: -10px;
-        color: rgb(42, 42, 42);
-        font-size: 12px;
-      }
       .footer{
         display: grid;
         justify-content: center;
@@ -34,6 +29,11 @@
         align-items: center;
         position: relative;
         text-align: center;
+      }
+      .copyright{
+        margin-top: -10px;
+        color: rgb(42, 42, 42);
+        font-size: 12px;
       }
       .footer-box p{
         padding: 0 10px;

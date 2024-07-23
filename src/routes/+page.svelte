@@ -5,7 +5,14 @@
   import Hade from "./hade.svelte";
   import Footer from "./footer.svelte";
   import Photos from "./photos.svelte";
+  import LazyLoadWrapper from './LazyLoadWrapper.svelte';
+  let isMuted = true;
+    let videoElement;
 
+    function toggleMute() {
+        isMuted = !isMuted;
+        videoElement.muted = isMuted;
+    }
   function showAlert() {
     alert("Invitation not allowed");
   }
@@ -15,30 +22,51 @@
 <section>
   <div class="firstsection">
     <div class="video-container">
-      <video autoplay width="100%" muted loop class="desktop">
+      <video autoplay width="100%" muted bind:this={videoElement} loop class="desktop">
         <source src="yo.mp4" type="video/mp4" />
-      </video>
-      <video autoplay width="100%" muted loop class="phone">
+    </video>
+    
+    {#if isMuted}
+        <svg on:click={toggleMute} version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+            <style>.a{fill:none;stroke:#020202;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22}</style>
+            <path class="a" d="m607.1 449.3l133-94.4"/>
+            <path class="a" d="m736.6 644.6l-130.5-92.6"/>
+            <path class="a" d="m608.5 496.9l158.5-0.2"/>
+            <path fill-rule="evenodd" class="a" d="m231 358.6h122v282.8h-122c-8.2 0-16.4-1.6-24-4.8-7.7-3.1-14.6-7.8-20.4-13.6-5.8-5.8-10.5-12.8-13.6-20.4-3.2-7.6-4.8-15.8-4.8-24v-157.2c0-8.2 1.6-16.4 4.8-24 3.1-7.7 7.8-14.6 13.6-20.4 5.8-5.8 12.7-10.5 20.4-13.6 7.6-3.2 15.8-4.8 24-4.8z"/>
+            <path class="a" d="m579 408.6v409.6c0 3.1-4.6 5-7.8 3l-145.9-121.7"/>
+            <path class="a" d="m394.5 672l-42.1-35.5v-273l218.8-184.7c3.2-2 7.8-0.2 7.8 3v157.8"/>
+        </svg>
+    {:else}
+        <svg on:click={toggleMute} viewBox="0 0 1000 1000" data-name="Layer 2" id="Layer_2" xmlns="http://www.w3.org/2000/svg">
+            <defs><style>.cls-1{fill:none;stroke:#020202;stroke-linecap:round;stroke-miterlimit:10;stroke-width:22px;}</style></defs>
+            <line class="cls-1" x1="644.38" x2="831.85" y1="393.76" y2="606.24"/>
+            <line class="cls-1" x1="831.85" x2="644.38" y1="393.76" y2="606.24"/>
+            <path class="cls-1" d="M231,358.6H353a0,0,0,0,1,0,0V641.4a0,0,0,0,1,0,0H231a62.81,62.81,0,0,1-62.81-62.81V421.4A62.81,62.81,0,0,1,231,358.6Z"/>
+            <path class="cls-1" d="M579,408.64V818.16c0,3.19-4.65,5-7.83,3L425.27,699.55"/>
+            <path class="cls-1" d="M394.53,672l-42.08-35.52v-273L571.19,178.83c3.18-2,7.83-.18,7.83,3V339.6"/>
+        </svg>
+    {/if}<video autoplay width="100%" muted loop class="phone">
         <source src="yophone.mp4" type="video/mp4" />
       </video>
       <div class="gradient-overlay"></div>
     </div>
     <div class="sec">
-      <h1>our masterpieces</h1>
+      <h1>our masterpieces!</h1>
       <a href="/gallery"><button>view gallery</button></a>
     </div>
   </div>
 </section>
-<Photos />
+<LazyLoadWrapper animation="slide-left" rootMargin="0px 0px -30% 0px">
+  <Photos />
+</LazyLoadWrapper>
+
+<LazyLoadWrapper animation="slide-top">
 <section>
   <div class="container">
     <h1>Livestream</h1>
     <div class="box">
       <div>
-        <h2>
-          experience the magic of your loed ones' special day in real-time with
-          our exclusive live stream feature
-        </h2>
+        <h2>Special day in real-time with our exclusive live stream feature</h2>
       </div>
       <div>
         <h3>enter invitation code</h3>
@@ -52,10 +80,19 @@
     </div>
   </div>
 </section>
-<About />
-<Slide />
+</LazyLoadWrapper>
 
-<Albums />
+<LazyLoadWrapper animation = "slide-scale-down" rootMargin="0px 0px -60% 0px">
+<About />
+</LazyLoadWrapper>
+
+<LazyLoadWrapper  animation = "slide-left" rootMargin="0px 0px -50% 0px">
+<Slide />
+</LazyLoadWrapper>
+<LazyLoadWrapper  animation = "slide-albums" rootMargin="0px 0px -40% 0px">
+
+<Albums /></LazyLoadWrapper>
+<LazyLoadWrapper>
 <div class="ready">
   <h1>Join the family !</h1>
   <img src="images/tr.jpg" alt="" />
@@ -89,8 +126,9 @@
       ></iframe>
     </div>
   </div>
-</div>
-<Footer />
+</div></LazyLoadWrapper>
+<br><br>
+<br><Footer />
 
 <style>
   .container {
@@ -103,7 +141,7 @@
     align-items: center;
     background-color: rgb(19, 19, 19);
     text-align: center;
-    margin-top: 180px;
+    margin-top: 10px;
   }
   .container h1 {
     font-size: 48px;
@@ -142,7 +180,7 @@
     text-align: center;
     align-items: center;
     border: 1px solid rgb(137, 137, 137);
-    width: 50%;
+    width: 70%;
     outline: none;
     font-family: "Cinzel", serif;
     height: 40px;
@@ -156,7 +194,7 @@
     text-align: center;
     align-items: center;
     border: 1px solid rgb(137, 137, 137);
-    width: 30%;
+    width: 40%;
     outline: none;
     font-family: "Cinzel", serif;
     height: 40px;
@@ -186,11 +224,11 @@
     align-items: center;
     height: 100vh;
   }
-  .ready img{
+  .ready img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: .4;
+    opacity: 0.4;
   }
   .ready h1 {
     font-size: 73px;
@@ -256,7 +294,7 @@
     display: flex;
     padding-left: 80px;
     color: black;
-    background-color: rgb(239, 239, 239);
+    background: linear-gradient(to bottom, white 0%, white 5%, rgb(238, 238, 238) 95%, rgb(238, 238, 238) 100%);
     padding-right: 80px;
     height: 80vh;
     border-bottom-left-radius: 380px;
@@ -264,6 +302,7 @@
   }
   .contact-box {
     margin-top: 100px;
+    width: 100%;
     display: flex;
     border: 2px solid rgb(107, 107, 107);
     padding: 30px 20px;
@@ -300,22 +339,76 @@
     position: relative;
     width: 100%;
   }
+  .video-container svg {
+    position: absolute;
+    top: 84%;
+    cursor: pointer;
+    left: 93%;
+    width: 70px;
+    z-index: 1;
+  }
   .video-container video {
     width: 100%;
   }
-
+  @media (max-width: 900px) {
+    .ready h1 {
+      font-size: 53px;
+    }
+    .video-container svg {
+    top: 74%;
+    left: 90%;
+    width: 60px;
+  }
+  }
   @media (max-width: 640px) {
-    
+    .video-container svg {
+    top: 74%;
+    left: 88%;
+    width: 50px;
+  }
+    .contact .map {
+      width: 100%;
+      outline: none;
+      border: 1px solid rgb(107, 107, 107);
+  }
+    .ready h1 {
+      font-size: 43px;
+    }
+    .box input {
+      width: 100%;
+    }
+    .box button {
+      width: 70%;
+    }
+    .sec {
+      place-content: center;
+      place-items: center;
+      display: grid;
+      text-align: center;
+      margin-top: -10px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .box h3 {
+      color: rgb(172, 172, 172);
+      margin: 50px;
+      font-size: 15px;
+      animation: scaleInOut 2s infinite;
+    }
+    .sec h1 {
+      font-size: 35px;
+    }
     .contact {
       border-bottom-left-radius: 0;
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-    .contact {
-      margin-bottom: 250px;
+      padding-left: 10px;
+      padding-right: 10px;
+      height: auto;
     }
     .contact-box {
+      border: 1px solid rgb(168, 168, 168);
+      margin-top: 70px;
       display: grid;
+      padding: 1px 1px;
       justify-content: center;
       border-bottom-left-radius: 0;
     }
@@ -324,10 +417,12 @@
     }
   }
   @media (max-width: 400px) {
+    .video-container svg {
+    display: none;
+  }
     .desktop {
       display: none;
     }
-
     .contact-box-1 h1 {
       font-size: 40px;
     }
