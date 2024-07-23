@@ -103,7 +103,7 @@
 	</div>
 	<div class="list">
 	  <div class="itms">
-		<a href="../#about"><p>about us</p></a>
+		<p>about us</p>
 		<a href="../gallery"><p>Gallery</p></a>
 	  </div>
 	  <div class="itms">
@@ -204,6 +204,7 @@
 	}
 	.itms {
 	  display: flex;
+	  color: black;
 	}
 	.itms a {
 	  text-decoration: none;

@@ -1,6 +1,6 @@
 <script>
 </script>
-<section class="about" id="about">
+<section class="about">
     <div class="container">
         <div class="row">
             <div class="coll">
