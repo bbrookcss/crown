@@ -56,11 +56,7 @@
     </div>
   </div>
 </section>
-<LazyLoadWrapper animation="slide-left" rootMargin="0px 0px -30% 0px">
   <Photos />
-</LazyLoadWrapper>
-
-<LazyLoadWrapper animation="slide-top">
 <section>
   <div class="container">
     <h1>Livestream</h1>
@@ -80,19 +76,10 @@
     </div>
   </div>
 </section>
-</LazyLoadWrapper>
 
-<LazyLoadWrapper animation = "slide-scale-down" rootMargin="0px 0px -60% 0px">
 <About />
-</LazyLoadWrapper>
 
-<LazyLoadWrapper  animation = "slide-left" rootMargin="0px 0px -50% 0px">
-<Slide />
-</LazyLoadWrapper>
-<LazyLoadWrapper  animation = "slide-albums" rootMargin="0px 0px -40% 0px">
-
-<Albums /></LazyLoadWrapper>
-<LazyLoadWrapper>
+<Albums />
 <div class="ready">
   <h1>Join the family !</h1>
   <img src="images/tr.jpg" alt="" />
@@ -126,7 +113,7 @@
       ></iframe>
     </div>
   </div>
-</div></LazyLoadWrapper>
+</div>
 <br><br>
 <br><Footer />
 
@@ -352,7 +339,7 @@
   }
   @media (max-width: 900px) {
     .ready h1 {
-      font-size: 53px;
+      font-size: 43px;
     }
     .video-container svg {
     top: 74%;
@@ -372,7 +359,7 @@
       border: 1px solid rgb(107, 107, 107);
   }
     .ready h1 {
-      font-size: 43px;
+      font-size: 38px;
     }
     .box input {
       width: 100%;

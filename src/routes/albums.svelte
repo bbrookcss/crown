@@ -127,6 +127,7 @@
             padding-right: 10px;
         }
         .container .box {
+            
             flex-direction: column;
             margin-top: 100px;
         }
