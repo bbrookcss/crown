@@ -56,11 +56,7 @@
     </div>
   </div>
 </section>
-<LazyLoadWrapper animation="slide-left" rootMargin="0px 0px -30% 0px">
   <Photos />
-</LazyLoadWrapper>
-
-<LazyLoadWrapper animation="slide-top">
 <section>
   <div class="container">
     <h1>Livestream</h1>
@@ -81,16 +77,9 @@
   </div>
 </section>
 
-</LazyLoadWrapper>
-
-<LazyLoadWrapper animation = "slide-scale-down" rootMargin="0px 0px -60% 0px">
 <About />
-</LazyLoadWrapper>
 
-<LazyLoadWrapper  animation = "slide-albums" rootMargin="0px 0px -40% 0px">
-
-<Albums /></LazyLoadWrapper>
-<LazyLoadWrapper>
+<Albums />
 <div class="ready">
   <h1>Join the family !</h1>
   <img src="images/tr.jpg" alt="" />
@@ -124,7 +113,7 @@
       ></iframe>
     </div>
   </div>
-</div></LazyLoadWrapper>
+</div>
 <br><br>
 <br><Footer /><br>
 
