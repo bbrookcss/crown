@@ -195,6 +195,12 @@
 	  text-decoration: none;
 	  color: rgb(0, 0, 0);
 	}
+	.logo h1 {
+		font-weight: 200;
+		font-size: 28px;
+		text-transform: uppercase;
+		font-family: Arial, Helvetica, sans-serif;
+	}
 	.list {
 	  display: flex;
 	  padding-left: 30px;
